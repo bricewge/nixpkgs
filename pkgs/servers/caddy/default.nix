@@ -8,6 +8,22 @@ buildGoPackage rec {
 
   subPackages = [ "caddy" ];
 
+
+  # Test to add plugins
+  extraSrcPaths = [
+    (fetFromGithub {
+      owner = "restic";
+      repo = "caddy";
+      rev = "v0.2";
+      # sha256 = "1khlsahv9vqx3h2smif5wdyb56jrza415hqid7883pqimfi66g3x";
+    })
+  ];
+  postConfigure = ''
+    substituteInPlace caddy/caddymain/run.go \
+      --replace "// This is where other plugins get plugged in (imported)" '_ "your/plugin/package/path/here"'
+  '';
+  
+  
   src = fetchFromGitHub {
     owner = "mholt";
     repo = "caddy";
