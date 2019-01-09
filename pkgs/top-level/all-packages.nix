@@ -14227,6 +14227,8 @@ in
 
   acpid = callPackage ../os-specific/linux/acpid { };
 
+  acpilight = callPackage ../os-specific/linux/acpilight { };
+
   acpitool = callPackage ../os-specific/linux/acpitool { };
 
   alfred = callPackage ../os-specific/linux/batman-adv/alfred.nix { };

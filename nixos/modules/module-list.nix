@@ -81,6 +81,7 @@
   ./misc/passthru.nix
   ./misc/version.nix
   ./programs/adb.nix
+  ./programs/acpilight.nix
   ./programs/atop.nix
   ./programs/bash/bash.nix
   ./programs/bcc.nix
