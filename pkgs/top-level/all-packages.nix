@@ -15826,6 +15826,8 @@ in
 
     cpupower = callPackage ../os-specific/linux/cpupower { };
 
+    ddcci-driver = callPackage ../os-specific/linux/ddcci { };
+
     deepin-anything = callPackage ../os-specific/linux/deepin-anything { };
 
     dpdk = callPackage ../os-specific/linux/dpdk { };
